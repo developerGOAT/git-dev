@@ -1,0 +1,8 @@
+addReviewers: true
+
+reviewers:
+  - thititongumpun
+
+numberOfReviewers: 1
+
+addAssignees: author
