@@ -1,11 +1,13 @@
 name: 'Auto Assign'
 on:
-  pull_request:
+  pull_request_target:
+    types: [labeled]
 
 jobs:
   checkout:
     permissions: write-all
     runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'safe to test')
     
     steps:
       - uses: actions/checkout@v4
