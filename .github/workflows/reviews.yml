@@ -16,5 +16,5 @@ jobs:
 
       - name: Echo
         env:
-          USERNAME: ${{ secrest.USERNAMe }}
+          USERNAME: ${{ secrets.USERNAME }}
         run: echo $USERNAME
